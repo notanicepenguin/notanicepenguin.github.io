@@ -18,7 +18,7 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  color: #ff6f61; /* Accent color */
+  color: #fe640b; /* Accent color */
 }
 
 header p {
@@ -37,7 +37,7 @@ main {
 }
 
 main h2 {
-  color: #ff6f61; /* Accent color */
+  color: #fe640b; /* Accent color */
   border-bottom: 1px solid #333;
   padding-bottom: 0.5rem;
 }
