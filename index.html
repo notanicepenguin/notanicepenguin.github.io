@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Not a Nice Penguin</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1><span style="font-family: monospace; font-weight: bold;">notanicepenguin</span></h1>
+        <h1>
+            <span style="font-family: monospace; font-weight: bold;">notanicepenguin</span>
+        </h1>
     </header>
 
     <div class="tab-container">
-      <div class="tab" onclick="activateTab(this, 'index.html')">Home</div>
-      <div class="tab" onclick="activateTab(this, '/about/')">About</div>
-      <div class="tab" onclick="activateTab(this, '/links/')">Links</div>
-    </div>
+      <div class="tab" onclick="window.location.href='index.html'">Home</div>
+      <div class="tab" onclick="window.location.href='/about/'">About</div>
+      <div class="tab" onclick="window.location.href='/links/'">Links</div>
+    </div>    
     
-
     <main>
-      <h2>Hi there!</h2>
-      <p>Hello there! I'm not a nice penguin. My pronouns are Him/Him and I only speak English. I live in Riyadh, Saudi Arabia.<br>
-        <span style="color: #1e1e1e;">If you found this you deserve a cookie.</span>
-      </p>
+        <h2>Hi there!</h2>
+        <p>
+            Hello there! I'm not a nice penguin. My pronouns are Him/Him and I only speak English. 
+            I live in Riyadh, Saudi Arabia.<br>
+            <span style="color: #1e1e1e;">If you found this, you deserve a cookie.</span>
+        </p>
     </main>
 
     <footer>
-      <p><span style="font-weight: bold; font-family: monospace;">Made with love and sparkles by notanicepenguin! &#128150;</span></p>
+        <p>
+            <span style="font-weight: bold; font-family: monospace;">
+                Made with love and sparkles by notanicepenguin! 💖
+            </span>
+        </p>
     </footer>
 
     <script>
-      function activateTab(tab, url) {
-        // Remove 'active' class from all tabs
-        let tabs = document.querySelectorAll('.tab');
-        tabs.forEach(t => t.classList.remove('active'));
-    
-        // Add 'active' class to the clicked tab
-        tab.classList.add('active');
-    
-        // Redirect to the desired page
-        window.location.href = url;
-      }
+        function activateTab(tab) {
+            let tabs = document.querySelectorAll('.tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+        }
     </script>
-    
-  </body>
+</body>
 </html>
