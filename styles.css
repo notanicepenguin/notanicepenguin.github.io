@@ -1,10 +1,10 @@
 /* General Styles */
 body {
-  font-family: 'monospace ';
+  font-family: 'monospace';
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #121212; /* Dark background */
+  background-color: #1b1b1b; /* Dark background */
   color: #e0e0e0; /* Light text */
 }
 
@@ -21,9 +21,32 @@ header h1 {
   color: #fe640b; /* Accent color */
 }
 
-header p {
-  font-size: 1.2rem;
-  color: #bbb;
+/* Tabs Container */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  background-color: #1e1e1e;
+  border-bottom: 2px solid #1e1e1e;
+}
+
+.tab {
+  padding: 14px 20px;
+  cursor: pointer;
+  background-color: #1e1e1e;
+  transition: background-color 0.3s;
+  font-family: monospace;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.tab:hover {
+  background-color: #fe640b; /* Accent color */
+  color: #1e1e1e;
+}
+
+.tab.active {
+  background-color: #fe640b;
+  color: #1e1e1e;
 }
 
 /* Main Content */
@@ -33,9 +56,8 @@ main {
   padding: 1rem;
   border: 1px solid #333;
   border-radius: 10px;
-  background-color:#1e1e1e;
+  background-color: #1e1e1e;
   font-family: monospace;
-  font-weight: bold;
 }
 
 main h2 {
