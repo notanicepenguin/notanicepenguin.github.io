@@ -12,13 +12,20 @@
             <span style="font-family: monospace; font-weight: bold;">notanicepenguin</span>
         </h1>
     </header>
-
-    <div class="tab-container">
-      <div class="tab" onclick="window.location.href='index.html'">Home</div>
-      <div class="tab" onclick="window.location.href='/about/'">About</div>
-      <div class="tab" onclick="window.location.href='/links/'">Links</div>
-    </div>    
-    
+    <div class="tabs">
+      <a href="index.html">
+          <button class="tab-button">Home</button>
+      </a>
+      
+      <a href="/about.html">
+          <button class="tab-button">About</button>
+      </a>
+      
+      <a href="/links.html">
+          <button class="tab-button">Links</button>
+      </a>
+  </div>
+  
     <main>
         <h2>Hi there!</h2>
         <p>
@@ -31,17 +38,9 @@
     <footer>
         <p>
             <span style="font-weight: bold; font-family: monospace;">
-                Made with love and sparkles by notanicepenguin! 💖
+                Made with love and by notanicepenguin! 💖
             </span>
         </p>
     </footer>
-
-    <script>
-        function activateTab(tab) {
-            let tabs = document.querySelectorAll('.tab');
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-        }
-    </script>
 </body>
 </html>

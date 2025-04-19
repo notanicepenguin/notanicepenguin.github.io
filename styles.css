@@ -21,34 +21,6 @@ header h1 {
   color: #fe640b; /* Accent color */
 }
 
-/* Tabs Container */
-.tab-container {
-  display: flex;
-  justify-content: center;
-  background-color: #1e1e1e;
-  border-bottom: 2px solid #1e1e1e;
-}
-
-.tab {
-  padding: 14px 20px;
-  cursor: pointer;
-  background-color: #1e1e1e;
-  transition: background-color 0.3s;
-  font-family: monospace;
-  font-weight: bold;
-  color: #e0e0e0;
-}
-
-.tab:hover {
-  background-color: #fe640b; /* Accent color */
-  color: #1e1e1e;
-}
-
-.tab.active {
-  background-color: #fe640b;
-  color: #1e1e1e;
-}
-
 /* Main Content */
 main {
   max-width: 800px;
@@ -82,4 +54,25 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  gap: 15px; /* Adds space between buttons */
+  margin-top: 20px;
+}
+
+.tab-button {
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #bbb; 
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.tab-button:hover {
+  background-color: #fe640b;
 }
