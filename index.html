@@ -12,10 +12,11 @@
     </header>
 
     <div class="tab-container">
-      <div class="tab" onclick="activateTab(this)">Home</div>
-      <div class="tab" onclick="activateTab(this)">About</div>
-      <div class="tab" onclick="activateTab(this)">Links</div>
+      <div class="tab" onclick="activateTab(this, 'index.html')">Home</div>
+      <div class="tab" onclick="activateTab(this, '/about/')">About</div>
+      <div class="tab" onclick="activateTab(this, '/links/')">Links</div>
     </div>
+    
 
     <main>
       <h2>Hi there!</h2>
@@ -29,11 +30,18 @@
     </footer>
 
     <script>
-      function activateTab(tab) {
+      function activateTab(tab, url) {
+        // Remove 'active' class from all tabs
         let tabs = document.querySelectorAll('.tab');
         tabs.forEach(t => t.classList.remove('active'));
+    
+        // Add 'active' class to the clicked tab
         tab.classList.add('active');
+    
+        // Redirect to the desired page
+        window.location.href = url;
       }
     </script>
+    
   </body>
 </html>
