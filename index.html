@@ -40,6 +40,28 @@
                 Made with love and absolutley no caffeine, by notanicepenguin!
             </span>
         </p>
+        <div id="riyadh-time">My Time in Riyadh: </div>
     </footer>
 </body>
+<script>
+    function updateRiyadhTime() {
+      // Define Riyadh's timezone offset (UTC+3)
+      const riyadhOffset = 3;
+      const now = new Date();
+      const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000); // UTC time in milliseconds
+      const riyadhTime = new Date(utcTime + (riyadhOffset * 3600000)); // Add Riyadh's offset
+  
+      // Format the time
+      const formattedTime = riyadhTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  
+      // Update the HTML
+      document.getElementById('riyadh-time').textContent = `My Time in Riyadh: ${formattedTime}`;
+    }
+  
+    // Update time every second
+    setInterval(updateRiyadhTime, 1000);
+  
+    // Call the function initially
+    updateRiyadhTime();
+  </script>
 </html>
